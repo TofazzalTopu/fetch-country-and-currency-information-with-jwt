@@ -68,6 +68,11 @@ public class CountryServiceImpl implements CountryService {
     }
 
     @Override
+    public void delete(String countryId) {
+        countryRepository.deleteById(countryId);
+    }
+
+    @Override
     public List<Country> findCountryByName(String name) {
         limitNumberOfRequestPerMinute();
         List<Country> countryList = Arrays.asList(getCountries(name)).stream().map(this::getCountry).collect(Collectors.toList());

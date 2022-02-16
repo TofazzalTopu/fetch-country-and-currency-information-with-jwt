@@ -11,6 +11,7 @@ public interface CountryService {
     Country update(String countryId, Country country) throws NotFoundException;
     Country findById(String countryId) throws NotFoundException;
     List<Country> findAll();
+    void delete(String countryId);
 
     List<Country> findCountryByName(String name);
 }
