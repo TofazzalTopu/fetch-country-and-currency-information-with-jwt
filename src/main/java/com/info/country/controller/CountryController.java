@@ -1,5 +1,6 @@
 package com.info.country.controller;
 
+import com.info.country.constant.AppConstants;
 import com.info.country.model.Country;
 import com.info.country.service.CountryService;
 import io.swagger.annotations.ApiOperation;
@@ -11,7 +12,7 @@ import java.util.List;
 @CrossOrigin
 @RestController
 @RequiredArgsConstructor
-@RequestMapping(value = "/countries")
+@RequestMapping(value = "api/" + AppConstants.API_VERSION + "/countries")
 @ApiOperation(value = "Country information with currency exchange rates")
 public class CountryController {
 
